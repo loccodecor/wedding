@@ -865,96 +865,76 @@ RSVP form
 .rsvp {
   padding-bottom: 140px;
   .rsvp-form {
-    border: 2px solid #ff0000; /* Added border style directly to .rsvp-form */
-    padding: 20px; /* Added padding for better visual appearance */
-
+    border: 2px solid #ff0000;
+    padding: 20px;
+  
     .rsvp-btn {
       padding: 20px;
       font-size: 17px;
       border: solid 5px;
-      -moz-border-radius: 40px;
-      -webkit-border-radius: 40px;
       border-radius: 40px;
       display: inline-block;
       text-transform: uppercase;
+  
+      &:hover,
+      &:focus {
+        color: #ffffff; /* Assuming $white-color is white */
+        border-color: $accent-color;
+        background-color: $accent-color;
+      }
     }
-    .rsvp-btn:hover, .rsvp-btn:focus {
-      color: $white-color;
-      border-color: $accent-color;
-      background-color: $accent-color;
-    }
-
+  
     .form-input-group {
-      width: auto fit-content;
-      height:auto fit-content;
+      width: auto; /* Adjust as needed */
+      height: auto; /* Adjust as needed */
       margin: auto;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 1px;
+      border-radius: 5px;
       text-align: center;
       position: relative;
-      padding-bottom: 20px;
-      border: 1px solid #ff0000; /* Added border style directly to .rsvp-form */
       padding: 20px; /* Added padding for better visual appearance */
-
+      border: 1px solid #ff0000;
+  
       i {
         color: $accent-color;
         font-size: 22px;
-
       }
-
-      i:after {
-        content: "";
-        height: 300px;
-        width: 100px;
-        position: absolute;
-        top: 50%;
-        left: 30px;
-        transform: translateY(-50%);
-        text-align: center;
-        
-      }
-
+  
       i.fa-user,
       i.fa-users,
       i.fa-cutlery,
       i.fa-glass,
       i.fa-fort-awesome {
-        font-size:large;
+        font-size: large;
         position: absolute;
         top: 80%;
         transform: translateY(-50%);
         margin-left: 0px;
       }
-
+  
       input {
-        width: auto;
+        width: 100%; /* Adjust as needed */
         height: auto;
-        -moz-border-radius: 6px;
-        -webkit-border-radius: 6px;
-        border-radius: 1px;
+        border: 1px solid #000; /* Added border for input */
+        border-radius: 6px;
         box-sizing: border-box;
-
+  
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+          color: #999999; /* Placeholder color */
+        }
       }
-
-      input::-webkit-input-placeholder {
-        color: $form-placeholder;
-      }
-
-      input:-moz-placeholder {
-        color: $form-placeholder;
-      }
-
-      input::-moz-placeholder {
-        color: $form-placeholder;
-      }
-
-      input:-ms-input-placeholder {
-        color: $form-placeholder;
-      }
-
+    }
+  
+    /* Added border for radio buttons */
+    input[type="radio"] {
+      border: 1px solid #000;
+      border-radius: 50%; /* Makes the radio buttons round */
+      margin-right: 5px; /* Adjust spacing as needed */
+    }
   }
-  }}
+}
 
 /* ==========================================================================
 Footer
