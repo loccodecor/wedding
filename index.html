@@ -386,8 +386,9 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
+                        <h3>Thank you! 谢谢！</h3>
+                        <p>We are glad to see you join us on our big day. If you have another guest, please click Another!</p>
+                        <p>如果您有其他宾客，请点击其他宾客填入所有人！</p>
                         <div id="add-to-cal"></div>
                         <a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">Another! 其他宾客</a>
                     </div>
@@ -402,20 +403,23 @@
                 <h3>Reserve Your Spot Now! 请填空预约！</h3>
                 <p>We would greatly appreciate if you could RSVP before March 10, 2024</p>
                 <p>请在3月10日前填写</p>
+                <p>Please fill in for every Guest one at a time!</p>
+                <p>请给每一位您和您的宾客填写</p>
                 <form id="rsvp-form" class="rsvp-form "  action="" method="POST">
                     <div class="row" id="boxupman">
                         <div class="col-md-3 col-sm-3" id="boxupman"><i class="fa fa-user"></i> Guest Name 宾客姓名</div>
-                        <div class="col-md-2 col-sm-2" id="boxupman"><i class="fa fa-fort-awesome"></i>Ceremony 仪式 4:00PM</div> 
+                        <div class="col-md-3 col-sm-3" id="boxupman"><i class="fa fa-fort-awesome"></i>Ceremony 仪式 4:00PM</div> 
                         <div class="col-md-2 col-sm-2" id="boxupman"><i class="fa fa-glass"></i>Dinner 晚宴6:30PM</div>
-                        <div class="col-md-5 col-sm-5" id="boxupman"><i class="fa fa-cutlery"></i> Meal of Choice 晚宴选择</div>
+                        <div class="col-md-4 col-sm-4" id="boxupman"><i class="fa fa-cutlery"></i> Meal of Choice 晚宴选择</div>
                     </div>
+                    <div class="row"><p></p></div>
                     <div class="row">
                         <div class="col-md-3 col-sm-3">
                             <div class="form-input-group" >
                                 <input type="text" name="guestnames" placeholder="Enter Name" class="" required>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-md-3 col-sm-3">
                             <div class="form-input-group">
                                 <label><input type="radio" name="ceremony" value="Yes"> Yes</label>
                                 <label><input type="radio" name="ceremony" value="No"> No</label>
@@ -427,7 +431,7 @@
                                 <label><input type="radio" name="dinner" value="No"> No</label>
                             </div>
                         </div>
-                        <div class="col-md-5 col-sm-5">
+                        <div class="col-md-4 col-sm-4">
                             <div class="form-input-group">
                                 <label><input type="radio" name="choice" value="Beef"> Beef</label>
                                 <label><input type="radio" name="choice" value="Fish"> Fish</label>
@@ -436,6 +440,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row"><p></p></div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
