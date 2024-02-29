@@ -223,7 +223,15 @@ $(document).ready(function () {
     });
 
 });
-
+$(document).ready(function() {
+    $('.rsvp-btn').click(function() {
+        $('#rsvp-modal').modal('hide'); // Close the modal
+        
+    });
+});
+$('#rsvp-modal').on('hidden.bs.modal', function () {
+    $('#rsvp-form')[0].reset(); // Reset the form with id 'rsvp-form'
+});
 /********************** Extras **********************/
 
 // Google map

@@ -883,8 +883,8 @@ RSVP form
         color: #ffffff; /* Assuming $white-color is white */
         border-color: $accent-color;
         background-color: $accent-color;
+        cursor: pointer;
       }
-    }
   
     .form-input-group {
       width: 100%; /* Adjust as needed */
@@ -937,7 +937,7 @@ RSVP form
     }
   }
 }
-
+}
 /* ==========================================================================
 Footer
 ========================================================================== */
