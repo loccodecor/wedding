@@ -364,13 +364,10 @@
                         </div>
                     </div>
                     <div class="row text-center">
-                        <div class="col-md-6" style="padding: 5px;">
+                        <div>
                             <a class="btn btn-btn-accent btn-small"
                                href="https://www.google.com/maps/dir//The+Langham+Huntington,+Pasadena,+1401+S+Oak+Knoll+Ave,+Pasadena,+CA+91106/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x80c2c4be6ff6e3c3:0xb1f76c7cd1e2b230?sa=X&ved=2ahUKEwiQnLze2syEAxVLLUQIHfJrD-sQ48ADegQIGBAA"><i
                                     class="fa fa-taxi"></i>&nbsp;&nbsp;Google 谷歌地图</a>
-                        </div>
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show map 预览</a>
                         </div>
                     </div>
                 </div>
@@ -380,8 +377,7 @@
 </section>
 
 <section class="rsvp text-center" id="rsvp">
-
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="rsvp-modal" class="modal fade" tabindex="12" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -399,43 +395,41 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
+            <div class="col-md-12">
+                <h3>Reserve Your Spot Now! 请填空预约！</h3>
+                <p>We would greatly appreciate if you could RSVP before March 10, 2024</p>
+                <p>请在3月10日前填写</p>
+                <form id="rsvp-form" class="rsvp-form" action="" method="POST">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-user"></i> Guest Name 宾客姓名</div>
+                        <div class="col-md-2 col-sm-2"><i class="fa fa-check"></i> Ceremony 仪式 4:00PM</div> 
+                        <div class="col-md-2 col-sm-2"><i class="fa fa-utensils"></i> Dinner 晚宴6:30PM</div>
+                        <div class="col-md-5 col-sm-5"><i class="fa fa-utensils"></i> Meal of Choice 晚宴选择</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="form-input-group" >
+                                <input type="text" name="guestnames" placeholder="Enter Name" class="" required>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-2 col-sm-2">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
+                                <label><input type="radio" name="ceremony" value="Yes"> Yes</label>
+                                <label><input type="radio" name="ceremony" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <div class="form-input-group">
+                                <label><input type="radio" name="dinner" value="Yes"> Yes</label>
+                                <label><input type="radio" name="dinner" value="No"> No</label>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5">
+                            <div class="form-input-group">
+                                <label><input type="radio" name="choice" value="Beef"> Beef</label>
+                                <label><input type="radio" name="choice" value="Fish"> Fish</label>
+                                <label><input type="radio" name="choice" value="Vegetarian"> Vegetarian</label>
+                                <label><input type="radio" name="choice" value="Kids Meal"> Kid's Meal</label>
                             </div>
                         </div>
                     </div>
