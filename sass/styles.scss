@@ -819,10 +819,7 @@ Google map
   text-align: center;
 }
 
-#boxupman {
-  border: 5px solid #ff00c8; /* Added border style directly to .rsvp-form */
-  padding: 20px; /* Added padding for better visual appearance */
-}
+
 
 #map-canvas {
   height: 500px;
@@ -865,9 +862,14 @@ RSVP form
 .rsvp {
   padding-bottom: 140px;
   .rsvp-form {
-    border: 2px solid #ff0000;
+    border: 2px solid #ffacea;
     padding: 20px;
-  
+
+    .boxupman {
+      border: 1px solid #ffacea; /* Added border style directly to .rsvp-form */
+      padding: 20px; /* Added padding for better visual appearance */
+    }
+    
     .rsvp-btn {
       padding: 20px;
       font-size: 17px;
@@ -885,14 +887,14 @@ RSVP form
     }
   
     .form-input-group {
-      width: auto; /* Adjust as needed */
-      height: auto; /* Adjust as needed */
+      width: 100%; /* Adjust as needed */
+      height: 100%; /* Adjust as needed */
       margin: auto;
       border-radius: 5px;
       text-align: center;
       position: relative;
       padding: 20px; /* Added padding for better visual appearance */
-      border: 1px solid #ff0000;
+      border: 1px solid #ffacea;
   
       i {
         color: $accent-color;
@@ -913,8 +915,8 @@ RSVP form
   
       input {
         width: 100%; /* Adjust as needed */
-        height: auto;
-        border: 1px solid #000; /* Added border for input */
+        height: 100%;
+        border: 1px solid #ffacea; /* Added border for input */
         border-radius: 6px;
         box-sizing: border-box;
   
@@ -922,14 +924,14 @@ RSVP form
         &:-moz-placeholder,
         &::-moz-placeholder,
         &:-ms-input-placeholder {
-          color: #999999; /* Placeholder color */
+          color: #000000; /* Placeholder color */
         }
       }
     }
   
     /* Added border for radio buttons */
     input[type="radio"] {
-      border: 1px solid #000;
+      border: 1px solid #ffacea;
       border-radius: 50%; /* Makes the radio buttons round */
       margin-right: 5px; /* Adjust spacing as needed */
     }

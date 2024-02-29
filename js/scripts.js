@@ -166,14 +166,6 @@ $(document).ready(function () {
 
 
     /********************** Toggle Map Content **********************/
-    $('#btn-show-map').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
-    });
-    $('#btn-show-content').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
-    });
 
     /********************** Add to Calendar **********************/
     var myCalendar = createCalendar({
@@ -187,14 +179,14 @@ $(document).ready(function () {
             title: "Tristen and Elaine's Wedding",
 
             // Event start date
-            start: new Date('Mar 21, 2024 4:00'),
+            start: new Date('Mar 21, 2024 16:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Mar 21, 2024 10:00'),
+            end: new Date('Mar 21, 2024 22:00'),
 
             // Event Address
             address: 'The Langham Pasadena, Huntington',
@@ -235,34 +227,6 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-    var location = {lat: 34.121539, lng: -118.133366};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: location,
-        scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
-
-function initBBSRMap() {
-    var la_fiesta = {lat: 34.121539, lng: -118.133366};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: la_fiesta,
-        scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
-    });
-}
-
 // alert_markup
 function alert_markup(alert_type, msg) {
     return '<div class="alert alert-' + alert_type + '" role="alert">' + msg + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button></div>';
