@@ -818,8 +818,12 @@ Google map
 #togo {
   text-align: center;
 }
-
-
+.fancybox2 img {
+  width: 40% !important;
+}
+#schedule {
+  padding:10px;
+}
 
 #map-canvas {
   height: 500px;

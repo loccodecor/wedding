@@ -64,6 +64,7 @@ $(document).ready(function () {
         width: 1000,
         height: 800
     });
+  
 
     /***************** Tooltips ******************/
     $('[data-toggle="tooltip"]').tooltip();
@@ -127,7 +128,7 @@ $(document).ready(function () {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top - 90
+                        scrollTop: target.offset().top - 50
                     }, 2000);
                     return false;
                 }
