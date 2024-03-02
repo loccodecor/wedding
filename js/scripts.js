@@ -203,24 +203,31 @@ $(document).ready(function () {
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
-        var data = $(this).serialize();
-
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-            $.post('https://script.google.com/macros/s/AKfycbxzcKUbJwuxikXjfxklvQXf0CY4AuBFE8qrW4ELhdwvtwCRoRlAYUlGabzMOPR4hrg/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
-                    } else {
-                        $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
-                    }
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
-        
+        var $alertWrapper = $('#alert-wrapper');
+        var $form = $(this);
+        var formData = $form.serializeArray(); // Convert form data to array
+        var deviceInfo = {
+            device: navigator.platform,
+            browser: navigator.userAgent
+        };
+        var jsonData = JSON.stringify(deviceInfo); // Convert deviceInfo to JSON string
+        formData.push({name: 'deviceInfo', value: jsonData}); // Append device information to form data
+    
+        $alertWrapper.html(alert_markup('info', '<strong>Dont Close!</strong> We are saving your details. 请不要关闭窗口，存储中'));
+    
+        $.post('https://script.google.com/macros/s/AKfycbzHfoh4TuRO8uQ_9LY7icssYYQww1kG0vmaStgQXR2TaSeylxUpaqEMKJK2NKITti34/exec', formData)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $alertWrapper.html(alert_markup('danger', data.message));
+                } else {
+                    $alertWrapper.html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function () {
+                $alertWrapper.html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server.'));
+            });
     });
 
 });
